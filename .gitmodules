@@ -1,0 +1,9 @@
+[submodule "vendor/prototype"]
+	path = vendor/prototype
+	url = https://github.com/sstephenson/prototype.git
+[submodule "vendor/scriptaculous"]
+	path = vendor/scriptaculous
+	url = https://github.com/madrobby/scriptaculous.git
+[submodule "vendor/lowpro"]
+	path = vendor/lowpro
+	url = https://github.com/danwrong/low-pro.git
