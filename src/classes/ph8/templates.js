@@ -1,10 +1,11 @@
-/*
- * Mixin
- */
 /**
  * @description mixin if you need templates
+ * @class
  */
 pH8.Mixin.needsTemplates = {
+	/**
+	 * @lends pH8.Mixin.needsTemplates#
+	 */
 	/**
 	 * Call this function in your initializer
 	 * @param {Object} templates The template Urls by name

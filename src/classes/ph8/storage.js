@@ -1,9 +1,8 @@
-/**
- * Singleton 
- */
+/** @namespace */
 pH8.Storage = (function() {
 	/**
-	 * Private var _instance, only one Storage instance needed
+	 * only one Storage instance needed
+	 * @private
 	 */
 	var _instance = null;
 	/**

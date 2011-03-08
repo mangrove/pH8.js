@@ -1,13 +1,13 @@
-/**
- * Singleton 
- */
+/** @namespace */
 pH8.Dictionary = (function() {
 	/**
-	 * Private var _instance, only one Dictionary instance needed
+	 * only one Dictionary instance needed
+	 * @private
 	 */
 	var _instance = null;
 	/**
-	 * Private var _list holds the dictionary
+	 * holds the dictionary
+	 * @private
 	 */
 	var _list = null;
 	/**
@@ -44,8 +44,12 @@ pH8.Dictionary = (function() {
  */
 /**
  * @description mixin if you need dictionary support, calls the callback function as soon as the dictionary is available
+ * @class
  */
 pH8.Mixin.needsDictionary = {
+	/**
+	 * @lends pH8.Mixin.needsDictionary#
+	 */
 	/**
 	 * Call this function in your initializer
 	 * @param {Function} callback The function to call on successful dictionary load

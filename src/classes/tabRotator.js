@@ -37,6 +37,7 @@ TabRotator = Class.create({
 		this.tabElements = this.tabsElement.childElements();
 		this.linkElements = this.tabsElement.select('a');
 		this.activeIndex = this.tabElements.indexOf(this.tabsElement.down('.' + this.options.activeClass));
+		this.activeIndex = (this.activeIndex == -1)? 0 : this.activeIndex;
 		this.zIndex = 2;
 
 		Event.observe(this.tabsElement, 'click', this.clickHandler.bindAsEventListener(this));

@@ -1,11 +1,14 @@
 /**
+ * @fileoverview Definition of form.js
+ */
+/**
+ * Wraps a Form DOMElement to do background submits & checks
  * @class pH8.Form
  * @lends pH8.Form
- * Wraps a Form DOMElement to do background submits & checks
  */
 pH8.Form = Class.create({
 	/**
-	 * Constructor
+	 * @constructs
 	 * @param {Form} element The form
 	 * @param {Object} delegate Our delegate object, implementing pH8.Form delegate protocol
 	 * @param {Object} options Optional settings

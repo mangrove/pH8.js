@@ -5,8 +5,8 @@
  */
 
 /**
- * @class Dialog
- * @lends Dialog
+ * @class pH8.Dialog
+ * @lends pH8.Dialog
  */
 pH8.Dialog = Class.create({
 	/**

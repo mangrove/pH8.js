@@ -1,14 +1,18 @@
+/** @namespace */
 pH8.Pages = (function() {
 	/**
 	 * Private var _instance, only one Pages instance needed
+	 * @private
 	 */
 	var _instance = null;
 	/**
 	 * Private var _list holds the page labels
+	 * @private
 	 */
 	var _list = null;
 	/**
 	 * Public interface
+	 * @scope pH8.Pages
 	 */
 	return function(language) {
 		if (_instance !== null) {
@@ -38,9 +42,13 @@ pH8.Pages = (function() {
 	};
 })();
 /**
- * @description mixin if you need page label support, calls the callback function as soon as the pages labels are available
+ * mixin if you need page label support, calls the callback function as soon as the pages labels are available
+ * @class
  */
 pH8.Mixin.needsPages = {
+	/**
+	 * @lends pH8.Mixin.needsPages#
+	 */
 	/**
 	 * Call this function in your initializer
 	 * @param {Function} callback The function to call on successful dictionary load

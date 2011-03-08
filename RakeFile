@@ -1,4 +1,3 @@
-
 require 'rake'
 
 PKG_NAME        = 'pH8js'
@@ -9,9 +8,7 @@ PKG_FILE_NAME   = "#{PKG_NAME}-#{PKG_VERSION}"
 PKG_DESTINATION = ENV["PKG_DESTINATION"] || "dist/#{PKG_FILE_NAME}"
 
 PROTOTYPE_VERSION = '1.7'
-LOWPRO_VERSION = 'master'
 SCRIPTACULOUS_VERSION = '1.9.0'
-
 
 desc "Default Task"
 task :default => [ :clean, :distribute]
@@ -19,7 +16,6 @@ task :default => [ :clean, :distribute]
 task :clean do
   rm_rf PKG_DESTINATION
 end
-
 
 LIB_FILES = FileList[
   'vendor/datepicker.js',
@@ -30,13 +26,15 @@ LIB_FILES = FileList[
 ]
 
 desc "Make a ready-for-packaging distribution dir"
-task :distribute do 
+task :distribute do
   mkdir PKG_DESTINATION
   mkdir File.join(PKG_DESTINATION, "lib")
   
   LIB_FILES.each { |file| cp file, File.join(PKG_DESTINATION, "lib", File::basename(file)) }
   
+  system %{cp -R src/ #{PKG_DESTINATION}/}
   system %{cd vendor/prototype; git checkout #{PROTOTYPE_VERSION}; rake; cp dist/prototype.js ../../#{PKG_DESTINATION}/lib/prototype.js; cd ../../}
   system %{cd vendor/scriptaculous; git checkout #{SCRIPTACULOUS_VERSION}; rake; cp dist/scriptaculous-js-#{SCRIPTACULOUS_VERSION}/src/* ../../#{PKG_DESTINATION}/lib; cd ../../}
-  
 end
+
+

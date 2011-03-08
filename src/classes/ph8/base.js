@@ -2,6 +2,10 @@
  * pH8 Extensions of Prototype
  * (c) 2005-2010 Joris Verbogt
  */
+
+/**
+ * @namespace pH8
+ */
 pH8 = {};
 pH8.Version = '2.0';
 pH8.CompatibleWithPrototype = '1.6';
@@ -17,8 +21,8 @@ pH8.SiteVersion = function() {
 		return 0;
 	}
 }();
-/*
- * Space for Mixin classes
+/**
+ * @namespace pH8.Mixin
  */
 pH8.Mixin = {};
 /*
