@@ -10,6 +10,10 @@
 Maps.Filter = Class.create({
 	/**
 	 * @constructs
+	 * <pre>
+	 *  Maps.Filter listens to the following events:
+	 *   - map:search		remove and load filters
+	 * </pre>
 	 * @param {FormElement} element The form
 	 */
 	initialize: function(element, options) {

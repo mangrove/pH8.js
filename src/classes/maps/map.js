@@ -10,6 +10,15 @@
  */
 Maps.Map = Class.create({
 	/**
+	 * @description
+	 * <pre>
+	 *  Maps.Map listens to the following events:
+	 *   - map:search		search for an address using the geocoder
+	 *   - map:cleardata	remove the markers from the map
+	 *   - map:newdata		add new markers to the map
+	 *   - map:zoomin		zoom in one level on the map
+	 *   - map:highlight	highlight a marker
+	 * </pre>
 	 * @constructs
 	 * @param {DOMElement} element
 	 * @param {Object} options (optional)

@@ -39,9 +39,6 @@ pH8.Dictionary = (function() {
 	};
 })();
 
-/*
- * Mixin
- */
 /**
  * @description mixin if you need dictionary support, calls the callback function as soon as the dictionary is available
  * @class

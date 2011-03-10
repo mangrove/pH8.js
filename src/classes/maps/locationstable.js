@@ -10,6 +10,13 @@
 Maps.LocationsTable = Class.create({
 	/**
 	 * @constructs
+	 * @description
+	 * <pre>
+	 *  Maps.LocationsTable listens to the following events:
+	 *   - map:getData		
+	 *   - map:select		
+	 *   - map:highlight	highlight a row by setting "selected" class
+	 * </pre>
 	 * @param {Element} element The container DOM element
 	 */
 	initialize: function(element, options) {

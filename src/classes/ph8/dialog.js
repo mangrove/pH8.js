@@ -16,7 +16,7 @@ pH8.Dialog = Class.create({
 	 * <pre>
 	 * duration: 0.5,
 	 * opacity: 0.25,
-	 * dialogId: 'IQdialog',
+	 * dialogId: 'dialog',
 	 * windowClass: 'window'
 	 * </pre>
 	 */
@@ -24,7 +24,7 @@ pH8.Dialog = Class.create({
 		this.options = Object.extend({
 			duration: 0.5,
 			opacity: 0.25,
-			dialogId: 'IQdialog',
+			dialogId: 'dialog',
 			windowClass: 'window',
 			hasCloseButton: true
 		}, options || {});
@@ -66,8 +66,6 @@ pH8.Dialog = Class.create({
 		popup.setStyle({
 			top: document.viewport.getScrollOffsets().top + "px"
 		});
-		
-		
 		return popup;
 	},
 

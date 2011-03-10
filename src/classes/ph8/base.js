@@ -28,6 +28,7 @@ pH8.Mixin = {};
 /*
  * Custom methods to extended DOM Elements
  */
+
 Element.addMethods({
 	/**
 	 * Get all class parameters, i.e. class names like {prefix}-{name}={value}

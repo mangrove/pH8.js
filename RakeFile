@@ -11,7 +11,7 @@ PROTOTYPE_VERSION = '1.7'
 SCRIPTACULOUS_VERSION = '1.9.0'
 
 desc "Default Task"
-task :default => [ :clean, :distribute]
+task :default => [ :clean, :distribute, :docs]
 
 task :clean do
   rm_rf PKG_DESTINATION
@@ -37,4 +37,7 @@ task :distribute do
   system %{cd vendor/scriptaculous; git checkout #{SCRIPTACULOUS_VERSION}; rake; cp dist/scriptaculous-js-#{SCRIPTACULOUS_VERSION}/src/* ../../#{PKG_DESTINATION}/lib; cd ../../}
 end
 
+task :docs do
+	system %{java -jar vendor/jsdoc-toolkit/jsrun.jar vendor/jsdoc-toolkit/app/run.js -a -r -p -t=vendor/jsdoc-toolkit/templates/jsdoc -d=#{PKG_DESTINATION}/docs src/classes/}
+end
 
